@@ -31,12 +31,6 @@ jobs:
           source .venv/bin/activate
           pip install platformio
 
-      - name: Move firmware files to project root
-        run: |
-          mv esp32c3_marauder_webui/* .
-          mv esp32c3_marauder_webui/.* . 2>/dev/null || true
-          rm -rf esp32c3_marauder_webui
-
       - name: Compile firmware for ESP32-C3
         run: |
           source .venv/bin/activate
