@@ -49,6 +49,7 @@ class DummyTFT {
     void drawCentreString(...) {}
     void setTextSize(int) {}
     void setTextWrap(bool) {}
+    void setTextWrap(bool, bool) {}
     void setCursor(int, int) {}
     int getCursorY() { return 0; }
     void print(...) {}
@@ -76,6 +77,7 @@ class Display {
     void print(String s) {}
     void println(String s) {}
     void setTextWrap(bool) {}
+    void tteBar(...) {}
     bool printing = false;
     bool loading = false;
     DisplayBuffer* display_buffer = nullptr;

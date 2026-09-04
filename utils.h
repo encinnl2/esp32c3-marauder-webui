@@ -1,41 +1,18 @@
+#ifndef utils_h
+#define utils_h
+
 #ifndef TFT_WIDTH
   #define TFT_WIDTH 240
 #endif
 #ifndef TFT_HEIGHT
   #define TFT_HEIGHT 320
 #endif
-#ifndef TFT_GREEN
-  #define TFT_GREEN 0x07E0
+#ifndef STATUS_BAR_WIDTH
+  #define STATUS_BAR_WIDTH 0
 #endif
-#ifndef TFT_RED
-  #define TFT_RED 0xF800
+#ifndef CHAR_WIDTH
+  #define CHAR_WIDTH 6
 #endif
-#ifndef TFT_WHITE
-  #define TFT_WHITE 0xFFFF
-#endif
-#ifndef TFT_BLACK
-  #define TFT_BLACK 0x0000
-#endif
-#ifndef TFT_YELLOW
-  #define TFT_YELLOW 0xFFE0
-#endif
-#ifndef TFT_CYAN
-  #define TFT_CYAN 0x07FF
-#endif
-#ifndef TFT_MAGENTA
-  #define TFT_MAGENTA 0xF81F
-#endif
-#ifndef TFT_BLUE
-  #define TFT_BLUE 0x001F
-#endif
-#ifndef TFT_ORANGE
-  #define TFT_ORANGE 0xFD20
-#endif
-#ifndef TFT_VIOLET
-  #define TFT_VIOLET 0x780F
-#endif
-#ifndef utils_h
-#define utils_h
 
 #include <Arduino.h>
 #include <vector>
