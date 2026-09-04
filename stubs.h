@@ -2,10 +2,22 @@
 #ifndef STUBS_C3_H
 #define STUBS_C3_H
 
-// Minimal stubs for ESP32-C3 Marauder (no display / SD / GPS / Battery / Flipper LED)
 #include <Arduino.h>
+#include <LinkedList.h>
 
-#ifndef HAS_SCREEN
+// Structs needed by WiFiScan and CommandLine
+struct ssid {
+    String ssid;
+    bool selected;
+};
+
+struct AccessPoint {
+    String ssid;
+    uint8_t bssid[6];
+    int channel;
+    int rssi;
+};
+
 class Display {
   public:
     void setupDisplay() {}
@@ -14,9 +26,7 @@ class Display {
     void drawBitmap(...) {}
 };
 extern Display display_obj;
-#endif
 
-#ifndef HAS_SD
 class SDInterface {
   public:
     bool init() { return false; }
@@ -25,9 +35,7 @@ class SDInterface {
     size_t write(uint8_t*, size_t) { return 0; }
 };
 extern SDInterface sd_obj;
-#endif
 
-#ifndef HAS_GPS
 class GpsInterface {
   public:
     void setup() {}
@@ -35,15 +43,12 @@ class GpsInterface {
     float getLon() { return 0.0; }
 };
 extern GpsInterface gps_obj;
-#endif
 
-#ifndef HAS_BATTERY
 class BatteryInterface {
   public:
     int getBatteryPercent() { return 100; }
 };
 extern BatteryInterface battery_obj;
-#endif
 
 class EvilPortal {
   public:
@@ -54,7 +59,6 @@ class EvilPortal {
 };
 extern EvilPortal evil_portal_obj;
 
-#ifndef HAS_FLIPPER_LED
 class flipperLED {
   public:
     void attackLED() {}
@@ -84,6 +88,5 @@ class stickcLED {
     void setMode(int) {}
 };
 extern stickcLED stickc_led;
-#endif
 
 #endif // STUBS_C3_H

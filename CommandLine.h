@@ -3,6 +3,7 @@
 #ifndef CommandLine_h
 #define CommandLine_h
 
+#include "stubs.h"
 #include "configs.h"
 
 #ifndef HAS_SCREEN
