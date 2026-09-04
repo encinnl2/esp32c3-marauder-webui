@@ -9,3 +9,6 @@ flipperLED flipper_led;
 xiaoLED xiao_led;
 stickcLED stickc_led;
 MenuFunctions menu_function_obj;
+const int CYAN_KEY = 0;
+const int MAGENTA_KEY = 0;
+const int WHITE_KEY = 0;

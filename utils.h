@@ -25,6 +25,18 @@
 #ifndef RED_KEY
   #define RED_KEY 0
 #endif
+#ifndef MAGENTA_KEY
+  extern const int MAGENTA_KEY;
+#endif
+#ifndef WHITE_KEY
+  extern const int WHITE_KEY;
+#endif
+#ifndef BUTTON_ARRAY_LEN
+  #define BUTTON_ARRAY_LEN 0
+#endif
+#ifndef EXT_BUTTON_WIDTH
+  #define EXT_BUTTON_WIDTH 0
+#endif
 #ifndef TFT_GREEN
   #define TFT_GREEN 0x07E0
 #endif

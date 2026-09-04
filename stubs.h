@@ -92,11 +92,13 @@ class Display {
     void tftDrawExitScaleButtons(...) {}
     void tftDrawChanHopButton(...) {}
     void twoPartDisplay(...) {}
+    void updateTouch() {}
+    int key = 0;
 };
 extern Display display_obj;
 
 #ifndef CYAN_KEY
-  #define CYAN_KEY 0
+  extern const int CYAN_KEY;
 #endif
 
 class SDInterface {
