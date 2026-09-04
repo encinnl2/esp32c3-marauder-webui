@@ -60,6 +60,7 @@ class DummyTFT {
     void drawCircle(...) {}
     void fillCircle(...) {}
     void drawLine(...) {}
+    void setFreeFont(...) {}
 };
 
 class Display {
@@ -78,10 +79,9 @@ class Display {
     void print(String s) {}
     void println(String s) {}
     void setTextWrap(bool) {}
-    void tteBar(...) {}
-    void tteBar() {}
-    void print_delay_1(...) {}
-    void print_delay_2(...) {}
+    int tteBar = 0;
+    int print_delay_1 = 0;
+    int print_delay_2 = 0;
     bool printing = false;
     bool loading = false;
     DisplayBuffer* display_buffer = nullptr;
@@ -120,6 +120,7 @@ extern BatteryInterface battery_obj;
 class EvilPortal {
   public:
     void setup() {}
+    void begin() {}
     void main() {}
     void renderPage() {}
     void endPortal() {}
