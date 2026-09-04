@@ -36,7 +36,7 @@ struct DisplayBuffer {
   char* line = nullptr;
   DisplayBuffer* next = nullptr;
   DisplayBuffer* prev = nullptr;
-  int size = 0;
+  int size() { return 0; }
   void add(...) {}
   void remove(...) {}
   void clear() {}
@@ -87,11 +87,11 @@ class Display {
     DisplayBuffer* display_buffer = nullptr;
     DummyTFT tft;
     int TOP_FIXED_AREA_2 = 0;
-    const char* version_number = "v0.0.0-C3";
+    String version_number = "v1.15.1";
     void tftDrawChannelScaleButtons(...) {}
     void tftDrawExitScaleButtons(...) {}
     void tftDrawChanHopButton(...) {}
-    void twoPartDisplay() {}
+    void twoPartDisplay(...) {}
 };
 extern Display display_obj;
 
