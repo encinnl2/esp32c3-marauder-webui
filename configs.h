@@ -4,6 +4,8 @@
 
   #define configs_h
 
+  #include "utils.h"
+
   #define ESP32_C3
   #define HAS_SCREEN // Stubs
   #define HAS_BT
