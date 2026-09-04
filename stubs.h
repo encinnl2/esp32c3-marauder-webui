@@ -56,8 +56,9 @@ class Display {
     void println(String s) {}
     void setTextWrap(bool) {}
     bool printing = false;
-    void loading() {}
+    bool loading = false;
     DisplayBuffer* display_buffer = nullptr;
+    void tft(...) {}
 };
 extern Display display_obj;
 

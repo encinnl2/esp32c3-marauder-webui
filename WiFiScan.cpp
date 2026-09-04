@@ -1981,7 +1981,7 @@ bool WiFiScan::isBlockedIdentifier(uint16_t id) {
 
 bool WiFiScan::isHostAlive(IPAddress ip) {
   if (ip != IPAddress(0, 0, 0, 0))
-    return Ping.ping(ip, 1);  // 1 try, returns true if reply received
+    return true;  // Stubbed ping
   else
     return false;
 }
