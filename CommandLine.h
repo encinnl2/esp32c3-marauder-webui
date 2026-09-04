@@ -5,9 +5,9 @@
 
 #include "configs.h"
 
-#ifdef HAS_SCREEN
-  #include "MenuFunctions.h"
-  #include "Display.h"
+#ifndef HAS_SCREEN
+//   #include "MenuFunctions.h"
+//   #include "Display.h"
 #endif 
 
 #include "WiFiScan.h"
