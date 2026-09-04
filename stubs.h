@@ -48,7 +48,9 @@ class DummyTFT {
     void drawString(...) {}
     void drawCentreString(...) {}
     void setTextSize(int) {}
+    void setTextWrap(bool) {}
     void setCursor(int, int) {}
+    int getCursorY() { return 0; }
     void print(...) {}
     void println(...) {}
     void drawRect(...) {}
@@ -65,6 +67,8 @@ class Display {
     void main_run() {}
     void clearScreen() {}
     void showCenteredText(const char*, int) {}
+    void showCenterText(const char*, int) {}
+    void showCenterText(...) {}
     void drawBitmap(...) {}
     void setTextColor(...) {}
     void setCursor(int, int) {}
