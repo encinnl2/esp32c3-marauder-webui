@@ -39,6 +39,7 @@ struct DisplayBuffer {
   int size = 0;
   void add(...) {}
   void remove(...) {}
+  void clear() {}
 };
 
 class DummyTFT {
@@ -78,10 +79,14 @@ class Display {
     void println(String s) {}
     void setTextWrap(bool) {}
     void tteBar(...) {}
+    void tteBar() {}
+    void print_delay_1(...) {}
+    void print_delay_2(...) {}
     bool printing = false;
     bool loading = false;
     DisplayBuffer* display_buffer = nullptr;
     DummyTFT tft;
+    int TOP_FIXED_AREA_2 = 0;
 };
 extern Display display_obj;
 
@@ -120,6 +125,8 @@ class EvilPortal {
     void endPortal() {}
     bool setAP(...) { return true; }
     void setHtmlFromSerial(...) {}
+    void cleanup() {}
+    bool has_ap = false;
     int ap_index = 0;
     bool target_html_name = false;
     bool using_serial_html = false;
