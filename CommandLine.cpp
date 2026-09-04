@@ -390,7 +390,7 @@ void CommandLine::runCommand(String input) {
         Serial.println((String)STOPSCAN_CMD);
         wifi_scan_obj.currentScanMode = WIFI_SCAN_GPS_DATA;
         #ifdef HAS_SCREEN
-          menu_function_obj.changeMenu(menu_function_obj.gpsInfoMenu);
+          menu_function_obj.changeMenu((MenuCallback)&MenuFunctions::gpsInfoMenu);
         #endif
         wifi_scan_obj.StartScan(WIFI_SCAN_GPS_DATA, TFT_CYAN);
       }
@@ -459,7 +459,7 @@ void CommandLine::runCommand(String input) {
         else if (track_arg != -1) {
           wifi_scan_obj.currentScanMode = GPS_TRACKER;
           #ifdef HAS_SCREEN
-            menu_function_obj.changeMenu(menu_function_obj.gpsInfoMenu);
+            menu_function_obj.changeMenu((MenuCallback)&MenuFunctions::gpsInfoMenu);
           #endif
           wifi_scan_obj.StartScan(GPS_TRACKER, TFT_CYAN);
         }
@@ -472,7 +472,7 @@ void CommandLine::runCommand(String input) {
     #ifdef HAS_GPS
       if (gps_obj.getGpsModuleStatus()) {
         #ifdef HAS_SCREEN
-          menu_function_obj.changeMenu(menu_function_obj.gpsInfoMenu);
+          menu_function_obj.changeMenu((MenuCallback)&MenuFunctions::gpsInfoMenu);
         #endif
         wifi_scan_obj.currentScanMode = WIFI_SCAN_GPS_NMEA;
         wifi_scan_obj.StartScan(WIFI_SCAN_GPS_NMEA, TFT_CYAN);
@@ -601,16 +601,16 @@ void CommandLine::runCommand(String input) {
     int ss_sw = this->argSearch(&cmd_args, "-s"); // SSIDs
     int cl_sw = this->argSearch(&cmd_args, "-c"); // Stations
 
-    if (ap_sw != -1) {
+      if (ap_sw != -1) {
       #ifndef HAS_SCREEN
-        menu_function_obj.changeMenu(menu_function_obj.clearAPsMenu);
+        menu_function_obj.changeMenu((MenuCallback)&MenuFunctions::clearAPsMenu);
       #endif
       wifi_scan_obj.RunClearAPs();
     }
 
     if (ss_sw != -1) {
       #ifdef HAS_SCREEN
-        menu_function_obj.changeMenu(menu_function_obj.clearSSIDsMenu);
+        menu_function_obj.changeMenu((MenuCallback)&MenuFunctions::clearSSIDsMenu);
       #endif
       wifi_scan_obj.RunClearSSIDs();
     }
@@ -1625,7 +1625,7 @@ void CommandLine::runCommand(String input) {
     else {
       wifi_scan_obj.currentScanMode = SHOW_INFO;
       #ifdef HAS_SCREEN
-        menu_function_obj.changeMenu(menu_function_obj.infoMenu);
+        menu_function_obj.changeMenu((MenuCallback)&MenuFunctions::infoMenu);
       #endif
       wifi_scan_obj.RunInfo();
     }
@@ -1847,13 +1847,13 @@ void CommandLine::runCommand(String input) {
 
     if (ap_sw != -1) {
       #ifdef HAS_SCREEN
-        menu_function_obj.changeMenu(menu_function_obj.saveAPsMenu);
+        menu_function_obj.changeMenu((MenuCallback)&MenuFunctions::saveAPsMenu);
       #endif
       wifi_scan_obj.RunSaveAPList(true);
     }
     else if (st_sw != -1) {
       #ifdef HAS_SCREEN
-        menu_function_obj.changeMenu(menu_function_obj.saveSSIDsMenu);
+        menu_function_obj.changeMenu((MenuCallback)&MenuFunctions::saveSSIDsMenu);
       #endif
       wifi_scan_obj.RunSaveSSIDList(true);
     }
@@ -1864,13 +1864,13 @@ void CommandLine::runCommand(String input) {
 
     if (ap_sw != -1) {
       #ifdef HAS_SCREEN
-        menu_function_obj.changeMenu(menu_function_obj.loadAPsMenu);
+        menu_function_obj.changeMenu((MenuCallback)&MenuFunctions::loadAPsMenu);
       #endif
       wifi_scan_obj.RunLoadAPList();
     }
     else if (st_sw != -1) {
       #ifdef HAS_SCREEN
-        menu_function_obj.changeMenu(menu_function_obj.loadSSIDsMenu);
+        menu_function_obj.changeMenu((MenuCallback)&MenuFunctions::loadSSIDsMenu);
       #endif
       wifi_scan_obj.RunLoadSSIDList();
     }

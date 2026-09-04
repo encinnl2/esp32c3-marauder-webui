@@ -115,6 +115,8 @@ class stickcLED {
 };
 extern stickcLED stickc_led;
 
+typedef void (MenuFunctions::*MenuCallback)();
+
 class MenuFunctions {
   public:
     void runSetup() {}
@@ -127,7 +129,7 @@ class MenuFunctions {
     void buildAnarchyInfoList() {}
     void changeChannel(int) {}
     void changeMenu(int) {}
-    void changeMenu(void(*)()) {}
+    void changeMenu(MenuCallback) {}
     void drawStatusBar() {}
     void clearAPsMenu() {}
     void clearSSIDsMenu() {}
