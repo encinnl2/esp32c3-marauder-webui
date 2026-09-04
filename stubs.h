@@ -31,6 +31,12 @@ struct AccessPoint {
   uint32_t last_seen_ms;
 };
 
+struct DisplayBuffer {
+  bool displayed = false;
+  char* line = nullptr;
+  DisplayBuffer* next = nullptr;
+};
+
 class Display {
   public:
     void setupDisplay() {}
@@ -45,9 +51,9 @@ class Display {
     void print(String s) {}
     void println(String s) {}
     void setTextWrap(bool) {}
-    void display_buffer(...) {}
     void printing(...) {}
     void loading(...) {}
+    DisplayBuffer* display_buffer = nullptr;
 };
 extern Display display_obj;
 
