@@ -602,8 +602,8 @@ void CommandLine::runCommand(String input) {
     int cl_sw = this->argSearch(&cmd_args, "-c"); // Stations
 
     if (ap_sw != -1) {
-      #ifdef HAS_SCREEN
-        menu_function_obj.changeMenu(&menu_function_obj.clearAPsMenu);
+      #ifndef HAS_SCREEN
+        menu_function_obj.changeMenu(menu_function_obj.clearAPsMenu);
       #endif
       wifi_scan_obj.RunClearAPs();
     }

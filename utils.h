@@ -31,8 +31,8 @@
 #ifndef TFT_ORANGE
   #define TFT_ORANGE 0xFD20
 #endif
-#ifndef TFT_DARKGREY
-  #define TFT_DARKGREY 0x4208
+#ifndef TFT_VIOLET
+  #define TFT_VIOLET 0x780F
 #endif
 #ifndef utils_h
 #define utils_h

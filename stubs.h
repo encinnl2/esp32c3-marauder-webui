@@ -78,6 +78,8 @@ class EvilPortal {
     void renderPage() {}
     void endPortal() {}
     void setAP(...) {}
+    bool target_html_name = false;
+    bool using_serial_html = false;
 };
 extern EvilPortal evil_portal_obj;
 
@@ -123,9 +125,12 @@ class MenuFunctions {
     void buildAnarchyInfoList() {}
     void changeChannel(int) {}
     void changeMenu(int) {}
+    void changeMenu(void(*)()) {}
     void drawStatusBar() {}
     void clearAPsMenu() {}
     void clearSSIDsMenu() {}
+    void infoMenu() {}
+    void saveAPsMenu() {}
     void stopScan() {}
     void startScan(int) {}
     int current_menu = 0;
