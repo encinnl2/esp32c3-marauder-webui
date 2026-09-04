@@ -51,7 +51,12 @@ size_t WiFiScan::retainedBleDeviceCount() const {
   return ble_devices == nullptr ? 0 : ble_devices->size();
 }
 
-extern "C" int ieee80211_raw_frame_sanity_check(int32_t arg, int32_t arg2, int32_t arg3){
+static int ieee80211_raw_frame_sanity_check_marauder(int32_t arg, int32_t arg2, int32_t arg3) {
+    if (arg == 31337)
+      return 1;
+    else
+      return 0;
+}
     if (arg == 31337)
       return 1;
     else
@@ -1797,7 +1802,7 @@ bool WiFiScan::isFlockCamera(const uint8_t* payload, size_t len, const String& n
 }
 
 void WiFiScan::RunSetup() {
-  if (ieee80211_raw_frame_sanity_check(31337, 0, 0) == 1)
+  if (ieee80211_raw_frame_sanity_check_marauder(31337, 0, 0) == 1)
     this->wsl_bypass_enabled = true;
   else
     this->wsl_bypass_enabled = false;
