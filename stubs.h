@@ -87,10 +87,11 @@ class Display {
     DisplayBuffer* display_buffer = nullptr;
     DummyTFT tft;
     int TOP_FIXED_AREA_2 = 0;
-    String version_number = "v0.0.0-C3";
-    void tftDrawChannelScaleButtons() {}
-    void tftDrawExitScaleButtons() {}
-    void tftDrawChanHopButton() {}
+    const char* version_number = "v0.0.0-C3";
+    void tftDrawChannelScaleButtons(...) {}
+    void tftDrawExitScaleButtons(...) {}
+    void tftDrawChanHopButton(...) {}
+    void twoPartDisplay() {}
 };
 extern Display display_obj;
 

@@ -19,6 +19,12 @@
 #ifndef SCREEN_HEIGHT
   #define SCREEN_HEIGHT 320
 #endif
+#ifndef GREEN_KEY
+  #define GREEN_KEY 0
+#endif
+#ifndef RED_KEY
+  #define RED_KEY 0
+#endif
 #ifndef TFT_GREEN
   #define TFT_GREEN 0x07E0
 #endif
