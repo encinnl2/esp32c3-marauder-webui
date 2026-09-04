@@ -8,3 +8,4 @@ EvilPortal evil_portal_obj;
 flipperLED flipper_led;
 xiaoLED xiao_led;
 stickcLED stickc_led;
+MenuFunctions menu_function_obj;
