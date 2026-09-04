@@ -20,10 +20,10 @@
   #define SCREEN_HEIGHT 320
 #endif
 #ifndef GREEN_KEY
-  #define GREEN_KEY 0
+  #define GREEN_KEY int(0)
 #endif
 #ifndef RED_KEY
-  #define RED_KEY 0
+  #define RED_KEY int(0)
 #endif
 #ifndef MAGENTA_KEY
   extern const int MAGENTA_KEY;
@@ -42,6 +42,12 @@
 #endif
 #ifndef CHAN_PER_PAGE
   #define CHAN_PER_PAGE 0
+#endif
+#ifndef GRAPH_VERT_LIM
+  #define GRAPH_VERT_LIM 0
+#endif
+#ifndef SCREEN_WIDTH
+  #define SCREEN_WIDTH 240
 #endif
 #ifndef TFT_GREEN
   #define TFT_GREEN 0x07E0
