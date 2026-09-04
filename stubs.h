@@ -95,10 +95,13 @@ class Display {
     bool updateTouch(...) { return false; }
 
     struct Key {
-      bool press = false;
-      bool justReleased = false;
-      bool justPressed = false;
+      void press(bool) {}
+      void press() {}
+      void initButton(...) {}
+      void drawButton(...) {}
       bool contains(...) { return false; }
+      bool justReleased() { return false; }
+      bool isPressed() { return false; }
     };
     Key key[64];
 };

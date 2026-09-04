@@ -49,6 +49,9 @@
 #ifndef SCREEN_WIDTH
   #define SCREEN_WIDTH 240
 #endif
+#ifndef STANDARD_FONT_CHAR_LIMIT
+  #define STANDARD_FONT_CHAR_LIMIT 0
+#endif
 #ifndef TFT_GREEN
   #define TFT_GREEN 0x07E0
 #endif
