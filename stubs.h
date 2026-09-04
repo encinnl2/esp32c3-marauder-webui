@@ -87,6 +87,10 @@ class Display {
     DisplayBuffer* display_buffer = nullptr;
     DummyTFT tft;
     int TOP_FIXED_AREA_2 = 0;
+    String version_number = "v0.0.0-C3";
+    void tftDrawChannelScaleButtons() {}
+    void tftDrawExitScaleButtons() {}
+    void tftDrawChanHopButton() {}
 };
 extern Display display_obj;
 
@@ -121,6 +125,7 @@ class EvilPortal {
   public:
     void setup() {}
     void begin() {}
+    void begin(...) {}
     void main() {}
     void renderPage() {}
     void endPortal() {}

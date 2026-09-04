@@ -13,6 +13,12 @@
 #ifndef CHAR_WIDTH
   #define CHAR_WIDTH 6
 #endif
+#ifndef KEY_H
+  #define KEY_H 0
+#endif
+#ifndef SCREEN_HEIGHT
+  #define SCREEN_HEIGHT 320
+#endif
 #ifndef TFT_GREEN
   #define TFT_GREEN 0x07E0
 #endif
