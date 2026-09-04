@@ -157,9 +157,9 @@ void setup() {
 }
 
 void loop() {
-    dnsServer.processNextClient();
+    dnsServer.processNextRequest();
     ws.cleanupClients();
-    
+
     // Periodically run wifi scan / attack tasks if active
-    wifi_scan.main();
+    wifi_scan.main(millis());
 }

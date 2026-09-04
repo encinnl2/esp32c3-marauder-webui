@@ -44,6 +44,7 @@ class Settings {
 
   public:
     bool begin();
+    void runSetup();
 
     template <typename T>
     T loadSetting(const char* key);

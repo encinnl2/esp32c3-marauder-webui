@@ -140,6 +140,7 @@ class EvilPortal {
     void begin() {}
     void begin(...) {}
     void main() {}
+    void main(...) {}
     void renderPage() {}
     void endPortal() {}
     bool setAP(...) { return true; }

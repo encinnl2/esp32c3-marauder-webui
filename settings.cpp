@@ -528,3 +528,7 @@ bool Settings::createDefaultSettings(fs::FS &fs, bool spec, uint8_t index, const
 
   return true;
 }
+
+void Settings::runSetup() {
+  this->begin();
+}
