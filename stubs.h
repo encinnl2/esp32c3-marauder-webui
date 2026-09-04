@@ -36,6 +36,7 @@ struct DisplayBuffer {
   char* line = nullptr;
   DisplayBuffer* next = nullptr;
   DisplayBuffer* prev = nullptr;
+  int size = 0;
   void add(...) {}
   void remove(...) {}
 };
@@ -54,7 +55,7 @@ class Display {
     void print(String s) {}
     void println(String s) {}
     void setTextWrap(bool) {}
-    bool printing() { return false; }
+    bool printing = false;
     void loading() {}
     DisplayBuffer* display_buffer = nullptr;
 };
