@@ -115,6 +115,7 @@ class stickcLED {
 };
 extern stickcLED stickc_led;
 
+class MenuFunctions;
 typedef void (MenuFunctions::*MenuCallback)();
 
 class MenuFunctions {
