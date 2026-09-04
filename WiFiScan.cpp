@@ -57,11 +57,6 @@ static int ieee80211_raw_frame_sanity_check_marauder(int32_t arg, int32_t arg2, 
     else
       return 0;
 }
-    if (arg == 31337)
-      return 1;
-    else
-      return 0;
-}
 
 extern "C" {
   uint8_t esp_base_mac_addr[6];
