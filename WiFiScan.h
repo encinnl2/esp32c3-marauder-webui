@@ -3,6 +3,7 @@
 #ifndef WiFiScan_h
 #define WiFiScan_h
 
+#include "stubs.h"
 #include "configs.h"
 #include "utils.h"
 
@@ -223,7 +224,7 @@
 #define WDG_UPLOAD   1
 #define BOTH_UPLOAD  2
 
-extern EvilPortal evil_portal_obj;
+// extern EvilPortal evil_portal_obj;
 
 #ifdef HAS_SCREEN
   extern Display display_obj;
