@@ -37,6 +37,12 @@
 #ifndef EXT_BUTTON_WIDTH
   #define EXT_BUTTON_WIDTH 0
 #endif
+#ifndef BANNER_TIME
+  #define BANNER_TIME 0
+#endif
+#ifndef CHAN_PER_PAGE
+  #define CHAN_PER_PAGE 0
+#endif
 #ifndef TFT_GREEN
   #define TFT_GREEN 0x07E0
 #endif

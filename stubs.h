@@ -92,8 +92,8 @@ class Display {
     void tftDrawExitScaleButtons(...) {}
     void tftDrawChanHopButton(...) {}
     void twoPartDisplay(...) {}
-    void updateTouch() {}
-    int key = 0;
+    void updateTouch(...) {}
+    int key[64] = {0};
 };
 extern Display display_obj;
 
