@@ -224,21 +224,21 @@
 #define WDG_UPLOAD   1
 #define BOTH_UPLOAD  2
 
-// extern EvilPortal evil_portal_obj;
+class Display;
+class SDInterface;
+class GpsInterface;
+class BatteryInterface;
+class EvilPortal;
+class flipperLED;
+class xiaoLED;
+class stickcLED;
+class LedInterface;
 
-#ifdef HAS_SCREEN
-  extern Display display_obj;
-#endif
-#ifdef HAS_SD
-  extern SDInterface sd_obj;
-#endif
-#ifdef HAS_GPS
-  extern GpsInterface gps_obj;
-#endif
+extern Display display_obj;
+extern SDInterface sd_obj;
+extern GpsInterface gps_obj;
 extern Buffer buffer_obj;
-#ifdef HAS_BATTERY
-  extern BatteryInterface battery_obj;
-#endif
+extern BatteryInterface battery_obj;
 extern Settings settings_obj;
 #ifdef HAS_FLIPPER_LED
   extern flipperLED flipper_led;

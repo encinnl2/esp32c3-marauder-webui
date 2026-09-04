@@ -1,4 +1,9 @@
-#pragma once
+#ifndef TFT_WIDTH
+  #define TFT_WIDTH 240
+#endif
+#ifndef TFT_HEIGHT
+  #define TFT_HEIGHT 320
+#endif
 #ifndef utils_h
 #define utils_h
 
