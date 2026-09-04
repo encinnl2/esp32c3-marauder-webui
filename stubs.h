@@ -41,6 +41,23 @@ struct DisplayBuffer {
   void remove(...) {}
 };
 
+class DummyTFT {
+  public:
+    void setTextColor(...) {}
+    void fillScreen(...) {}
+    void drawString(...) {}
+    void drawCentreString(...) {}
+    void setTextSize(int) {}
+    void setCursor(int, int) {}
+    void print(...) {}
+    void println(...) {}
+    void drawRect(...) {}
+    void fillRect(...) {}
+    void drawCircle(...) {}
+    void fillCircle(...) {}
+    void drawLine(...) {}
+};
+
 class Display {
   public:
     void setupDisplay() {}
@@ -58,7 +75,7 @@ class Display {
     bool printing = false;
     bool loading = false;
     DisplayBuffer* display_buffer = nullptr;
-    void tft(...) {}
+    DummyTFT tft;
 };
 extern Display display_obj;
 
