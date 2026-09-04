@@ -45,8 +45,15 @@ class Display {
     void print(String s) {}
     void println(String s) {}
     void setTextWrap(bool) {}
+    void display_buffer(...) {}
+    void printing(...) {}
+    void loading(...) {}
 };
 extern Display display_obj;
+
+#ifndef CYAN_KEY
+  #define CYAN_KEY 0
+#endif
 
 class SDInterface {
   public:

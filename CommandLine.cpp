@@ -617,7 +617,7 @@ void CommandLine::runCommand(String input) {
 
     if (cl_sw != -1) {
       #ifdef HAS_SCREEN
-        menu_function_obj.changeMenu(menu_function_obj.clearAPsMenu);
+        menu_function_obj.changeMenu((MenuCallback)&MenuFunctions::clearAPsMenu);
       #endif
       wifi_scan_obj.RunClearStations();
     }
