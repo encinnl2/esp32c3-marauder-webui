@@ -77,7 +77,9 @@ class EvilPortal {
     void main() {}
     void renderPage() {}
     void endPortal() {}
-    void setAP(...) {}
+    bool setAP(...) { return true; }
+    void setHtmlFromSerial(...) {}
+    int ap_index = 0;
     bool target_html_name = false;
     bool using_serial_html = false;
 };
@@ -131,6 +133,11 @@ class MenuFunctions {
     void clearSSIDsMenu() {}
     void infoMenu() {}
     void saveAPsMenu() {}
+    void saveSSIDsMenu() {}
+    void loadAPsMenu() {}
+    void loadSSIDsMenu() {}
+    void gpsInfoMenu() {}
+    void gpsPOIMenu() {}
     void stopScan() {}
     void startScan(int) {}
     int current_menu = 0;
